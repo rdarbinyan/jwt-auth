@@ -107,7 +107,7 @@ class JWTManager
             $this->payloadFactory->make([
                 'sub' => $payload['sub'],
                 'iat' => $payload['iat'],
-		'exp' => 2*$payload['exp']-$payload['iat']
+                'exp' => Carbon::now()->timestamp - $payload['iat'] + $payload['exp']
             ])
         );
     }
