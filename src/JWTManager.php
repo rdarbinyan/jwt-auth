@@ -14,6 +14,7 @@ namespace Tymon\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Providers\JWT\JWTInterface;
 use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
+use Carbon\Carbon;
 
 class JWTManager
 {
